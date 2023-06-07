@@ -60,4 +60,7 @@
     <string name="DialogTitle_OperationCompleted">操作完成</string>
     <string name="DialogTitle_OperationConfirmation">确认操作</string>
     <string name="DialogButton_Confirm">确认</string>
+    <string name="AntiDeleteMsg">防止消息删除</string>
+    <string name="AntiDeleteMsgDesc">"删除的消息会储存到  ctx.filesDir/TMoe_deleted_messages.db，启用“显示消息ID”会在载入消息时，提示已经删除的消息 "</string>
+    <string name="deleted">已删除</string>
 </resources>

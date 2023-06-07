@@ -83,4 +83,7 @@
     <string name="DialogTitle_OperationConfirmation">Confirmation</string>
     <string name="DialogButton_Confirm">Confirm</string>
     <string name="DialogMsg_ConfirmDumpChannelMembers">Fetch group members?</string>
+    <string name="AntiDeleteMsg">Anti delete message</string>
+    <string name="AntiDeleteMsgDesc">The deleted messages will be stored in ctx.filesDir/TMoe_deleted_messages.db. If the \"Show Message ID\" option is enabled, it will prompt that the message has been deleted when loading the messages.</string>
+    <string name="deleted">deleted</string>
 </resources>

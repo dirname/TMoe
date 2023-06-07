@@ -19,6 +19,9 @@ class SettingsFragment : BaseHierarchyFragment() {
                 EnableDebugMode.INSTANCE, "EnableDebugMode", R.string.EnableDebugMode
             )
             functionSwitch(
+                AntiDeleteMsg.INSTANCE, "AntiDeleteMsg", R.string.AntiDeleteMsg, "AntiDeleteMsgDesc", R.string.AntiDeleteMsgDesc
+            )
+            functionSwitch(
                 AntiAntiForward, "AntiAntiForward", R.string.AntiAntiForward,
                 "RestrictContentMitigationDesc", R.string.RestrictContentMitigationDesc
             )
@@ -65,7 +68,9 @@ class SettingsFragment : BaseHierarchyFragment() {
                 HistoricalNewsOption, "HistoricalNewsOption", R.string.HistoricalNewsOption
             )
             functionSwitch(
-                ProhibitChannelSwitching, "ProhibitChannelSwitching", R.string.ProhibitChannelSwitching
+                ProhibitChannelSwitching,
+                "ProhibitChannelSwitching",
+                R.string.ProhibitChannelSwitching
             )
             functionSwitch(
                 ProhibitEnableReactions, "ProhibitEnableReactions", R.string.ProhibitEnableReactions
@@ -85,7 +90,10 @@ class SettingsFragment : BaseHierarchyFragment() {
             functionSwitch(
                 ChannelDetailNumbers, "ChannelDetailNumbers", R.string.ChannelDetailNumbers,
                 descProvider = {
-                    LocaleController.getString("ChannelDetailNumbersD", R.string.ChannelDetailNumbersD)
+                    LocaleController.getString(
+                        "ChannelDetailNumbersD",
+                        R.string.ChannelDetailNumbersD
+                    )
                 }
             )
             functionSwitch(
@@ -101,18 +109,26 @@ class SettingsFragment : BaseHierarchyFragment() {
                 ForceBlurChatAvailable, "ForceBlurChatAvailable", R.string.ForceBlurChatAvailable
             )
             functionSwitch(
-                DisablePremiumStickerAnimation, "DisablePremiumStickerAnimation", R.string.DisablePremiumStickerAnimation
+                DisablePremiumStickerAnimation,
+                "DisablePremiumStickerAnimation",
+                R.string.DisablePremiumStickerAnimation
             )
             functionSwitch(
                 KeepVideoMuted, "KeepVideoMuted", R.string.KeepVideoMuted
             )
             functionSwitch(
-                ViewTopicAsMsgByDefault, "ViewTopicAsMsgByDefault", R.string.ViewTopicAsMsgByDefault,
-                "ViewTopicAsMsgByDefaultDesc", R.string.ViewTopicAsMsgByDefaultDesc
+                ViewTopicAsMsgByDefault,
+                "ViewTopicAsMsgByDefault",
+                R.string.ViewTopicAsMsgByDefault,
+                "ViewTopicAsMsgByDefaultDesc",
+                R.string.ViewTopicAsMsgByDefaultDesc
             )
             functionSwitch(
-                HidePremiumStickerSetTab, "HidePremiumStickerSetTab", R.string.HidePremiumStickerSetTab,
-                "HidePremiumStickerSetTabDesc", R.string.HidePremiumStickerSetTabDesc
+                HidePremiumStickerSetTab,
+                "HidePremiumStickerSetTab",
+                R.string.HidePremiumStickerSetTab,
+                "HidePremiumStickerSetTabDesc",
+                R.string.HidePremiumStickerSetTabDesc
             )
         }
         category("LostMsgMitigation", R.string.LostMsgMitigation) {

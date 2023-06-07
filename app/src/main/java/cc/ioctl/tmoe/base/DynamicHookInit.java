@@ -11,6 +11,7 @@ import cc.ioctl.tmoe.hook.func.AddReloadMsgBtn;
 import cc.ioctl.tmoe.hook.func.AddSubItemChannel;
 import cc.ioctl.tmoe.hook.func.AntiAntiCopy;
 import cc.ioctl.tmoe.hook.func.AntiAntiForward;
+import cc.ioctl.tmoe.hook.func.AntiDeleteMsg;
 import cc.ioctl.tmoe.hook.func.ChannelDetailNumbers;
 import cc.ioctl.tmoe.hook.func.DatabaseCorruptionWarning;
 import cc.ioctl.tmoe.hook.func.DisablePremiumStickerAnimation;
@@ -67,6 +68,7 @@ public class DynamicHookInit {
         if (sAllFunctionHooks == null) {
             sAllFunctionHooks = new DynamicHook[]{
                     EnableDebugMode.INSTANCE,
+                    AntiDeleteMsg.INSTANCE,
                     AntiAntiForward.INSTANCE,
                     ProhibitChannelSwitching.INSTANCE,
                     ProhibitEnableReactions.INSTANCE,
