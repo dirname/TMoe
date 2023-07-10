@@ -73,6 +73,9 @@ class SettingsFragment : BaseHierarchyFragment() {
                 R.string.ProhibitChannelSwitching
             )
             functionSwitch(
+                UseSystemEmoji, "UseSystemEmoji", R.string.UseSystemEmoji
+            )
+            functionSwitch(
                 ProhibitEnableReactions, "ProhibitEnableReactions", R.string.ProhibitEnableReactions
             )
             functionSwitch(
