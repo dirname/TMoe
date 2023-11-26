@@ -22,10 +22,10 @@ jobs:
           submodules: 'recursive'
           fetch-depth: 0
 
-      - name: set up JDK 11
+      - name: set up JDK 17
         uses: actions/setup-java@v3.9.0
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'adopt'
           cache: gradle
 
@@ -36,7 +36,7 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
             !~/.gradle/caches/build-cache-*
-          key: gradle-deps-core-${{ hashFiles('**/build.gradle') }}
+          key: gradle-deps-core-${{ hashFiles('**/build.gradle.kts', '**/build.gradle', '**/libs.versions.toml') }}
           restore-keys: |
             gradle-deps
 
@@ -55,7 +55,7 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          echo ${{ secrets.SIGN_KEYSTORE_BASE64 }} | base64 -d > keystore.jks
+          echo "${{ secrets.SIGN_KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
           ./gradlew :app:assembleRelease
         env:
           KEYSTORE_PATH: "../keystore.jks"

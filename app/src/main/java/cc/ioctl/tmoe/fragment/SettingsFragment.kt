@@ -28,6 +28,7 @@ class SettingsFragment : BaseHierarchyFragment() {
             functionSwitch(
                 HideSponsoredMsg, "HideSponsoredMsg", R.string.HideSponsoredMsg
             )
+            functionSwitch(FuckTrackingHook, "FuckTrackingHook", R.string.FuckTrackingHook, "FuckTrackingHookDesc", R.string.FuckTrackingHookDesc)
             functionSwitch(
                 HideUserAvatar.INSTANCE, "HideUserAvatar", R.string.HideUserAvatar,
                 descProvider = {
@@ -133,6 +134,10 @@ class SettingsFragment : BaseHierarchyFragment() {
                 "HidePremiumStickerSetTabDesc",
                 R.string.HidePremiumStickerSetTabDesc
             )
+            functionSwitch(
+                ShowExactLastSeenTime, "ShowExactLastSeenTime", R.string.ShowExactLastSeenTime,
+                "ShowExactLastSeenTimeDesc", R.string.ShowExactLastSeenTimeDesc
+            )
         }
         category("LostMsgMitigation", R.string.LostMsgMitigation) {
             functionSwitch(
@@ -164,6 +169,11 @@ class SettingsFragment : BaseHierarchyFragment() {
                 HistoricGroupMemberRecord,
                 "HistoricGroupMemberRecord", R.string.HistoricGroupMemberRecord,
                 "HistoricGroupMemberRecordDesc", R.string.HistoricGroupMemberRecordDesc
+            )
+            functionSwitch(
+                LocalGroupMemberList,
+                "LocalGroupMemberList", R.string.LocalGroupMemberList,
+                "LocalGroupMemberListDesc", R.string.LocalGroupMemberListDesc
             )
         }
         category("DebugAndLogsForClient", R.string.DebugAndLogsForClient) {

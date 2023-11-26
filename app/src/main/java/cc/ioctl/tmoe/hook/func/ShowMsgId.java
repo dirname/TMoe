@@ -8,11 +8,12 @@ import android.text.TextPaint;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import cc.ioctl.tmoe.R;
+import cc.ioctl.tmoe.base.annotation.FunctionHookEntry;
 import cc.ioctl.tmoe.hook.base.CommonDynamicHook;
 import cc.ioctl.tmoe.util.HookUtils;
 import cc.ioctl.tmoe.util.Initiator;
 
+@FunctionHookEntry
 public class ShowMsgId extends CommonDynamicHook {
 
     public static final ShowMsgId INSTANCE = new ShowMsgId();
@@ -43,7 +44,7 @@ public class ShowMsgId extends CommonDynamicHook {
         Field timeWidth = kChatMessageCell.getDeclaredField("timeWidth");
         timeWidth.setAccessible(true);
         HookUtils.hookAfterIfEnabled(this, measureTime, param -> {
-            String time = (String) currentTimeString.get(param.thisObject);
+            CharSequence time = (CharSequence) currentTimeString.get(param.thisObject);
             Object messageObject = param.args[0];
             Object owner = messageOwner.get(messageObject);
             Object peerID = peer_id.get(owner);

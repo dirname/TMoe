@@ -63,4 +63,6 @@
     <string name="AntiDeleteMsg">防止消息删除</string>
     <string name="AntiDeleteMsgDesc">"删除的消息会储存到  ctx.filesDir/TMoe_deleted_messages.db，启用“显示消息ID”会在载入消息时，提示已经删除的消息 "</string>
     <string name="deleted">已删除</string>
+    <string name="ShowExactLastSeenTime">最后上线精确到秒</string>
+    <string name="ShowExactLastSeenTimeDesc">仅对有权限查看用户最后上线时间的用户有效</string>
 </resources>
